@@ -1,0 +1,430 @@
+/* General Styles */
+/* General Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  line-height: 1.6;
+  background-image: url('https://tse4.mm.bing.net/th?id=OIP.-SVbPQ7JTrd2KQJiOQhvqQAAAA&pid=Api&P=0&h=220');
+  background-size: contain;  /* Changed from cover to contain */
+  background-position: center;
+  background-repeat: no-repeat;  /* Added to prevent repeating */
+  background-attachment: fixed;
+  position: relative;
+  background-color: #f5f7fa;  /* Fallback solid color */
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);  /* Increased opacity for better readability */
+  z-index: -1;
+}
+
+/* Rest of your CSS remains exactly the same */
+
+header {
+  background-color: #004080;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header p {
+  margin: 10px 0 0;
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+main {
+  padding: 30px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  color: #004080;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  text-align: center;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: #004080;
+  margin: 15px auto 0;
+}
+
+/* About Us Section */
+#about-us {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.about-image {
+  width: 45%;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+  width: 55%;
+}
+
+.about-text p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* Colleges Section */
+#colleges {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+#college-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 25px;
+}
+
+.college-card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.college-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.college-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.college-info {
+  padding: 20px;
+}
+
+.college-info h3 {
+  margin: 0 0 10px;
+  color: #004080;
+  font-size: 1.4rem;
+}
+
+.location {
+  color: #666;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+}
+
+.description {
+  margin-bottom: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.course-details {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.course-details h4 {
+  margin: 0 0 10px;
+  color: #004080;
+  font-size: 1.1rem;
+}
+
+.course-details ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.course-details li {
+  margin-bottom: 8px;
+  color: #444;
+}
+
+.contact {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 15px;
+}
+
+/* Chatbot Styles */
+#chatbot-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+#chatbot-toggle {
+  background-color: #004080;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+#chatbot-toggle:hover {
+  background-color: #003366;
+  transform: translateY(-2px);
+}
+
+#chatbot-window {
+  display: none;
+  width: 350px;
+  height: 500px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  flex-direction: column;
+}
+
+#chatbot-header {
+  background-color: #004080;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#chatbot-header h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+#chatbot-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+#chatbot-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#chatbot-messages {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+#chatbot-input-container {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #eee;
+}
+
+#chatbot-input {
+  flex: 1;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  outline: none;
+  font-size: 14px;
+}
+
+#chatbot-send {
+  background-color: #004080;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-left: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#chatbot-send:hover {
+  background-color: #003366;
+}
+
+.message {
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  border-radius: 18px;
+  max-width: 80%;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.message.bot {
+  background-color: #f0f0f0;
+  color: #333;
+  border-top-left-radius: 5px;
+  align-self: flex-start;
+}
+
+.message.user {
+  background-color: #004080;
+  color: white;
+  border-top-right-radius: 5px;
+  align-self: flex-end;
+}
+
+/* Chatbot Buttons */
+.option-button {
+  background-color: #004080;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.option-button:hover {
+  background-color: #003366;
+}
+
+.college-button {
+  background-color: #004080;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  font-size: 14px;
+}
+
+.college-button:hover {
+  background-color: #003366;
+}
+
+.course-button {
+  background-color: #006400;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.course-button:hover {
+  background-color: #004d00;
+}
+
+/* Input Fields */
+#marks-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  width: 150px;
+}
+
+#submit-marks {
+  background-color: #004080;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#submit-marks:hover {
+  background-color: #003366;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+  }
+
+  .about-image, .about-text {
+    width: 100%;
+  }
+
+  .about-image {
+    margin-bottom: 20px;
+  }
+
+  #college-list {
+    grid-template-columns: 1fr;
+  }
+
+  #chatbot-window {
+    width: 90%;
+    right: 5%;
+    height: 70vh;
+    bottom: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  .college-info h3 {
+    font-size: 1.2rem;
+  }
+}
